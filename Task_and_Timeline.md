@@ -15,3 +15,11 @@
     * Technical Notebook - Nick/Yasser
     * Non-Technical Notebook - OPTIONAL
     * Slidedeck Presentation - Nick
+* data cleaning needs
+    * Need to standardize columns across datasets in order to merge them
+    * * example: movie title, name, title, etc
+    * genre category is a mess; multiple duplicate entries with different genre tags
+    * * also need to seperate multi-tagged strings by comma to create multiple columns with one genre each
+    * need to remove duplicates, but first need to understand which duplicate entry is best to keep
+    * need to remove replace null values and mistake values
+    * * example: gross box office = 0
