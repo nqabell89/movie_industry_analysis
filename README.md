@@ -1,26 +1,27 @@
 # movie_industry_analysis
-This repository contains project materials for the first module in Flatiron's Data Science program, and deals with analyzing the movie industry for a hypothetical client interested in breaking into movie making. 
+This repository contains materials for the analysis of the movie industry. In a hypothetical project for Microsoft, I recommend an optimal movie profile for a possible market entrance into the movie making business. 
 
-Author - Abell
+Author - Nicholas Abell
 
 ## Deliverables
-    * README
-    * Technical Notebook
-    * Slidedeck Presentation
-## Assumptions
-    * Popular movie trends have changed dramatically over time, and only movies released since 2000 should be analyzed for today's audiences.
-    * Microsoft wants to create it's first movie in the US for a primarily domestic audience, while maximizing worldwide performance as a secondary goal at a later  date.
-    * In recent years, critic scores have become irrelevant for estimating the financial success and/or audience ratings of a film.
-    * Microsoft wants to maxamize ROI and popularity for their first major film project, and has the cash reserves needed to fund any style or size production.
+    * Movie_Industry_EDA.ipynb - Technical Notebook/White Paper
+    * Movie Industry Market Analysis.pptx - Slidedeck Presentation
+    * Data_Wrangling.ipynb - Data wrangling notebook
+    * clean_merge_function_imdb_meta.py - Python module for cleaning and merging data.
 ## Questions
     * Which movie genres are most profitable?
-    * Does higher budget equate to higher ratings?
-    * Does higher ratings equate to higher profit/gross income?
-    * Should we make movies shorter or longer? Are longer movies rated higher? More profitable?
-    * Which studios should we partner with based on their success?
-    * Over time, which genres have increased in popularity, rating, and profit?
+    * Which movie genres are rated higher by audiences?
+    * What is average budget of movies in the most profitable genre?
+    * What is the average runtime of movies in the most profitable genre?
+    * Which directors have the most experience, success, and audience ratings in the most profitable genre?
+    * Which release month would maximize box office performance?
+## Assumptions
+    * Popular movie trends have changed dramatically over time, and only movies released since 1990 should be analyzed for today's audiences.
+    * Microsoft wants to create it's first movie in the US for a primarily domestic audience, while maximizing worldwide box office as a secondary goal.
+    * In recent years, critic scores have become irrelevant for estimating the financial success and/or audience ratings of a film, and therefore are not useful in this analysis.
+    * Microsoft wants to maxamize profitability and popularity for their first major film project, and is not limited by budget.
 ## Data Cleaning Considerations
-    * Need to standardize columns across datasets in order to merge them
+    * need to standardize columns across datasets in order to merge them
     * * example: movie title, name, title, etc
     * genre category is a mess; multiple duplicate entries with different genre tags
     * * also need to seperate multi-tagged strings by comma to create multiple columns with one genre each
@@ -28,13 +29,5 @@ Author - Abell
     * need to remove replace null values and mistake values
     * * example: gross box office = 0
     * need to remove dollar signs from income/budget lines to convert to int
-## Visualizations
-    * check for outliers with boxplots
-    * check for corellations with heatmap
-# Notes
-    * reference week 2 day 3 for how to create .py script
-    * ROI - output=optompize duration, genre, 
-    * deck = 1-2 data cleaning slizes, 4 visualizations, how will i tell the story in 8-10 slides
-    * how much data did I start with? how much did I have after finishing cleaning? 7-8 
-    * * what aggragtes, transformations did I use? ex: combining audience scores
-    * problem (slide 1) -> cleaning (slide 2-3) -> analysis/visualizations (slides )
+    * need to convert dollar value columns into millions
+    * need to create profit/loss and ROI columns for both domestic and worldwide box office
